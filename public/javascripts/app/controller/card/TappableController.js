@@ -1,18 +1,18 @@
 /* 
-  Class: HandController
+  Class: TappableController
   Author: Jaime Bueza
   
   Reponsible for handling interaction and data retrieval for Hands while in game.
   
 */
-dojo.provide("app.controller.player.HandController");
-dojo.declare("app.controller.player.HandController", mojo.controller.Controller,{
+dojo.provide("app.controller.card.TappableController");
+dojo.declare("app.controller.card.TappableController", mojo.controller.Controller,{
   addObservers: function() {
-    this.addObserver(".hand-cards > li > .card", "onclick", "CSS", function(context, caller) {
+    this.addObserver(this.getContextElement(), "onclick", "CSS", function(context, caller) {
       return {
         element: caller,
         action: "toggle",
-        cssClass: "flip"
+        cssClass: "tapped"
       };
     });
   },

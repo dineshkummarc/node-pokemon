@@ -2,9 +2,19 @@
 /**
  * Module dependencies.
  */
+ 
+ var http = require('http'), 
+ 		url = require('url'),
+ 		fs = require('fs'),
+ 		sys = require('sys');
+var express = require('express');
+var connect = require('connect');
+var io = require('socket.io');
 
-var express = require('express'),
-    connect = require('connect');
+
+var couchdb = require('couchdb'),
+    client = couchdb.createClient(5984, 'localhost'),
+    db = client.db('cards');
 
 var app = module.exports = express.createServer();
 
@@ -30,6 +40,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', function(req, res){
+  
     res.render('login.ejs', {
       locals: {
         page: {
@@ -41,15 +52,58 @@ app.get('/', function(req, res){
 });
 
 app.get('/game', function(req, res){
+  
     res.render('game.ejs', {
       locals: {
         page: {
-          title: "POKEMON GAME"
+          title: "POKEMON HTML5/JS/CSS/NODEJS EXAMPLE"
         }
       }
     });
 });
 
-// Only listen on $ node app.js
 
+app.get('/testdb', function(req, res) {
+  
+  
+  db.getDoc('hellothere', function(er, doc) {
+//    if (er) throw new Error(JSON.stringify(er));
+    sys.puts('Fetched my new doc from couch:');
+    sys.puts(doc);
+    
+    
+    console.log("hello!");
+  });
+    
+    
+});
+
+
+
+
+// Only listen on $ node app.js
 if (!module.parent) app.listen(3000);
+
+
+/* Socket Server */ 
+server = http.createServer(function(req, res){});
+server.listen(3001);
+var io = io.listen(server),
+    buffer = [];
+
+io.on('connection', function(client){
+  client.send({ buffer: buffer });
+  client.broadcast({ announcement: client.sessionId + ' connected' });
+
+  client.on('message', function(message){
+    var msg = { message: [client.sessionId, message] };
+    buffer.push(msg);
+    if (buffer.length > 15) buffer.shift();
+    client.broadcast(msg);
+  });
+
+  client.on('disconnect', function(){
+    client.broadcast({ announcement: client.sessionId + ' disconnected' });
+  });
+});
+

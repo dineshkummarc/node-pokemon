@@ -4,10 +4,21 @@
       <div class="shade"></div>
       <div class="nav-container">
         <ul>
-          <li>Chat (200)</li>
-          <li>Battle Arena</li>
-          <li>Leave Battle</li>
-          <li>Achievements</li>
+          <li><button id="btn-friends" class="awesome">Friends (5 online)</button>
+            <div id="friends">
+              <ul>
+                <li>Steve Carell</li>
+                <li>Mr. Bean</li>
+                <li>Arnold Schwarzenegger</li>
+              </ul>
+            </div>
+          
+          </li>
+          <li><button id="btn-arena" class="awesome">Battle Arena</button></li>
+          <li><button id="btn-leave" class="awesome">Leave Battle</button></li>
+          <li><button id="btn-achievements" class="awesome">Achievements</button></li>
+          <li><button id="btn-options" class="awesome">Options</button></li>
+          <li><a id="btn-logout" href="/" class="red awesome">Logout</a></li>
         </ul>
       </div>
     </div>
@@ -17,6 +28,29 @@
   
   <div id="main">
 
+    <div id="chat-widget">
+
+      <div class="shade"></div>
+      <div class="chat-container">
+        <div class="chat-channel">
+          test
+        </div>
+        <div class="chat-input">
+          <div id="chat"><p>Connecting...</p></div>
+          <form id="form" onsubmit="send(); return false;">
+            <input type="text" autocomplete="off" id="text"><input type="submit" value="Send">
+          </form>
+          
+          <!--
+          <form id="chat" onsubmit="send(); return false;">
+              <input type="text" class="chat-textbox" autocomplete="off" id="chat-txt" /><button type="submit" class="awesome">Send</button>
+          </form>
+        -->
+        
+        </div>
+      </div>
+
+    </div>
     <div id="battleground">
       <div class="enemy-creatures">
       
@@ -24,7 +58,7 @@
     
     
       <div class="my-creatures">
-        <div id="card-lugia">
+        <div id="card-lugia" class="tappable">
           150HP
         </div>
       </div>

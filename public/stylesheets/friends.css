@@ -1,0 +1,12 @@
+#friends {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 300px; }
+  #friends ul {
+    margin: 0px; }
+    #friends ul li {
+      display: block; }
+
+#friends.active {
+  display: block; }

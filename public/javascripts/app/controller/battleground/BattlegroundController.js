@@ -1,20 +1,13 @@
 /* 
-  Class: HandController
+  Class: BattlegroundController
   Author: Jaime Bueza
   
   Reponsible for handling interaction and data retrieval for Hands while in game.
   
 */
-dojo.provide("app.controller.player.HandController");
-dojo.declare("app.controller.player.HandController", mojo.controller.Controller,{
+dojo.provide("app.controller.battleground.BattlegroundController");
+dojo.declare("app.controller.battleground.BattlegroundController", mojo.controller.Controller,{
   addObservers: function() {
-    this.addObserver(".hand-cards > li > .card", "onclick", "CSS", function(context, caller) {
-      return {
-        element: caller,
-        action: "toggle",
-        cssClass: "flip"
-      };
-    });
   },
   addCommands: function() {
     this.addCommand("Messaging", "stdlib.behavior.MessagingBehavior");

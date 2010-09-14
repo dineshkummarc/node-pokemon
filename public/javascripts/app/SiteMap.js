@@ -14,10 +14,23 @@ app.SiteMap = [
     ]
   },
   {
-    pattern: "#chat",
+    pattern: "#chat-widget",
     controllers: [
       { controller: "app.controller.chat.ChatController" }
     ]
     
+  },
+  {
+    pattern: "#friends",
+    controllers: [
+      { controller: "app.controller.member.FriendsController" }
+    ]
+  },
+  
+  {
+    pattern: ".tappable",
+    controllers: [
+      { controller: "app.controller.card.TappableController" }
+    ]
   }
 ];
