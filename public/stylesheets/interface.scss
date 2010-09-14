@@ -1,0 +1,134 @@
+#navigation {
+  border-bottom: 1px solid #000;
+  height: 30px;
+  color: #fff;
+  .nav-container {
+    
+  }
+  .shade {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: #000;
+    opacity: 0.6;
+    height: 30px;
+  }
+  li {
+    list-style: none;
+    display: inline;
+  }
+}
+
+.panel {
+  box-shadow: 1px 1px 35px rgba(0,0,0,1);
+  -moz-box-shadow: 1px 1px 35px rgba(0,0,0,1);
+  -webkit-box-shadow: 1px 1px 35px rgba(0,0,0,1);
+  -moz-border-radius: .6em;
+  border-radius: .6em;
+
+  .gutter {
+    margin: 15px;
+  }
+}
+
+
+.glossy-icon {
+  box-shadow: 1px 1px 15px rgba(0,0,0,1);
+  -moz-box-shadow: 1px 1px 15px rgba(0,0,0,1);
+  -webkit-box-shadow: 1px 1px 15px rgba(0,0,0,1);
+  -moz-border-radius: .6em;
+  border-radius: .6em;
+  background: #fff;
+  display: block;
+  width: 125px;
+  height: 94px;
+
+}
+
+
+
+.card {
+
+
+	float: left;
+	width: 107px;
+	height: 150px;
+	margin: 0 10px 0 0;
+	position: relative;
+	font-size: .8em;
+	opacity: 1;
+	-webkit-perspective: 700;
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+.card .front {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: inherit;
+	height: inherit;
+	border: 1px solid #ccc;
+	background: url(/images/sprites/sprite-small-off.jpg) 0 0 no-repeat;
+	text-align: center;
+
+	box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+.card.flip .front {
+	z-index: 900;
+	border-color: #eee;
+
+	-webkit-transform: rotateY(180deg);
+	
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.card .back {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: inherit;
+	height: inherit;
+	border: 1px solid #ccc;
+  background: #000;
+	text-shadow: 1px  1px 1px rgba(0,0,0,0.6); 
+	
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+
+.card.flip .back {
+	z-index: 1000;
+	
+	-webkit-transform: rotateY(0deg);
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+
+.card .back, .card .front {
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  border: 1px solid #000;
+}

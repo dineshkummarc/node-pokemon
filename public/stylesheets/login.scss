@@ -1,0 +1,86 @@
+.page-login {
+
+  position: relative;
+  color: #fff;
+  text-shadow: 3px 3px 5px #000;
+  border: 1px solid #000;
+  background: transparent url(/images/backgrounds/bg-pokemon-login.jpg) center center no-repeat;
+  width: 650px;
+  height: 450px;
+  margin: 50px auto 0 auto;
+  
+  h1 {
+    font-size: 32px;
+    margin: 10px;
+    text-transform: uppercase;
+  }
+  
+  #login {
+    margin: 15px 0px;
+    
+    .users {
+      margin: 0 0 15px 0;
+      
+      li {
+        position: relative;
+        cursor: pointer;
+        background: #fff;
+        list-style: none;
+        color: #111;
+        margin-bottom: 15px;
+        border: 1px solid #999;
+        padding: 10px;
+        
+        opacity: 0.6;
+        text-shadow: none;
+        
+        span.activation {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: #3cb700;
+          display: none;
+          text-transform: uppercase;
+        }
+          
+        
+        .user-icon {
+            background: #000;
+            float: right;
+
+            margin-right: 15px;
+        }
+       
+        .user-info {
+          h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+        &.active {
+          opacity: 1;
+          background: transparent url(/images/backgrounds/bg-gradient.png) 0 0 repeat-x;
+          
+          span.activation {
+            display: block;
+          }
+        }
+        
+        
+
+      }
+    }
+    
+  }
+  
+  .login-controls {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    li {
+      display: inline;
+      list-style: none;
+    }
+  }
+  
+}
