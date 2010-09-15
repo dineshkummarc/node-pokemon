@@ -3,15 +3,13 @@
  * Module dependencies.
  */
  
- var http = require('http'), 
- 		url = require('url'),
- 		fs = require('fs'),
- 		sys = require('sys');
+var http = require('http');
+var url = require('url');
+var fs = require('fs');
+var sys = require('sys');
 var express = require('express');
 var connect = require('connect');
 var io = require('socket.io');
-
-
 var couchdb = require('couchdb'),
     client = couchdb.createClient(5984, 'localhost'),
     db = client.db('cards');
@@ -88,8 +86,8 @@ if (!module.parent) app.listen(3000);
 /* Socket Server */ 
 server = http.createServer(function(req, res){});
 server.listen(3001);
-var io = io.listen(server),
-    buffer = [];
+io = io.listen(server);
+var buffer = [];
 
 io.on('connection', function(client){
   client.send({ buffer: buffer });
