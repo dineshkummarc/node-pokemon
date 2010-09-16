@@ -496,7 +496,6 @@ dojo.declare("stdlib.behavior.PlaySoundBehavior", mojo.command.Behavior,
 {
 	execute: function(requestObj) {
     var params = requestObj.getParams();
-    params.audio.pause();
     params.audio.play();
   }
 });

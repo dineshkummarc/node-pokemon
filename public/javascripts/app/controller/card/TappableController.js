@@ -15,10 +15,13 @@ dojo.declare("app.controller.card.TappableController", mojo.controller.Controlle
         cssClass: "tapped"
       };
     });
+    this.addObserver(this.getContextElement(), "onclick", "Play", { audio: mojo.queryFirst("#sound-headshot")});
+    
   },
   addCommands: function() {
     this.addCommand("Messaging", "stdlib.behavior.MessagingBehavior");
     this.addCommand("CSS", "stdlib.behavior.UpdateCssClassBehavior");
+    this.addCommand("Play", "stdlib.behavior.PlaySoundBehavior");
     
   },
   addIntercepts: function() {

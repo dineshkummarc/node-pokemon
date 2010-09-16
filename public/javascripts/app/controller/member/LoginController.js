@@ -17,11 +17,8 @@ dojo.declare("app.controller.member.LoginController", mojo.controller.Controller
       };
     });
     
-    this.addObserver(".users > li", "onclick", "Play", function(context, caller) {
-      return {
-        audio: mojo.queryFirst("#sound-dominating")
-      };
-    });
+    this.addObserver(".users > li", "onclick", "Play", { audio: mojo.queryFirst("#sound-dominating") });
+    this.addObserver("#btn-enter-world", "onclick", "Play", { audio: mojo.queryFirst("#sound-headshot") });
   },
   addCommands: function() {
     this.addCommand("Messaging", "stdlib.behavior.MessagingBehavior");

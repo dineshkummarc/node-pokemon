@@ -15,10 +15,12 @@ dojo.declare("app.controller.player.HandController", mojo.controller.Controller,
         cssClass: "flip"
       };
     });
+    this.addObserver(".hand-cards > li > .card", "onclick", "Play", { audio: mojo.queryFirst("#sound-tweet")});
   },
   addCommands: function() {
     this.addCommand("Messaging", "stdlib.behavior.MessagingBehavior");
     this.addCommand("CSS", "stdlib.behavior.UpdateCssClassBehavior");
+    this.addCommand("Play", "stdlib.behavior.PlaySoundBehavior");
     
   },
   addIntercepts: function() {
