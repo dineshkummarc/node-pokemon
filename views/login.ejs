@@ -1,72 +1,63 @@
 
-<div id="container" class="page-login panel">
-  <div class="gutter">
-  
-    <header>
-      <h1>Character Selection</h1>
-    </header>
-  
-    <div id="main">
+<div id="container" class="page-login">
+  <div id="main">
+    <div id="login-panel" class="panel">
+      
+      <div class="gutter">
+        <h1>Character Selection</h1>
+        <p>Select Pokemon Master</p>
     
-      <p>Select Pokemon Master</p>
-      
-      <form id="login" action="/game">
+        <form id="login" action="/game" method="POST">
+  
     
-      
-        <ul class="users">
-          <li class="line">
-            <div class="unit size1of3">
-              <span class="user-icon glossy-icon" style="background: url(/images/avatars/ash.jpg) 0 0 no-repeat"></span>
-            </div>
-            <div class="unit size2of3 user-info">
-              <span class="activation">Selected</span>
-              <h3>Ashlandi</h3>
-              <p>Level 23</p>
-              <p>Wins: 300</p>
-              <p>Losses: 200</p>
-              <p>Achievements: 3993</p>
-            </div>
-          
-          </li>
-          
-          <li class="line">
-            <div class="unit size1of3">
-              <span class="user-icon glossy-icon" style="background: url(/images/avatars/squirtle.jpg) 0 0 no-repeat"></span>
-            </div>
-            <div class="unit size2of3 user-info">
-              <span class="activation">Selected</span>
-              <h3>Bulzai</h3>
-              <p>Level 50</p>
-              <p>Wins: 540</p>
-              <p>Losses: 134</p>
-              <p>Achievements: 9440</p>
-            </div>
-          
-          </li>
-          
-          
-        </ul>
+          <ul class="users">
+            <li class="line">
+              <div class="unit size1of3">
+                <span class="user-icon glossy-icon" style="background: url(/images/avatars/ash.jpg) 0 0 no-repeat"></span>
+              </div>
+              <div class="unit size2of3 user-info">
+                <span class="activation">Selected</span>
+                <h3>Ashlandi</h3>
+                <p>Level 23</p>
+                <p>Wins: 300</p>
+                <p>Losses: 200</p>
+                <p>Achievements: 3993</p>
+              </div>
+            </li>
         
-        <div class="remember-password">
-          <label for="remember">Remember Password?</label>
-          <input id="remember" type="checkbox" value="true" name="remember" checked />
-        </div>
+            <li class="line">
+              <div class="unit size1of3">
+                <span class="user-icon glossy-icon" style="background: url(/images/avatars/squirtle.jpg) 0 0 no-repeat"></span>
+              </div>
+              <div class="unit size2of3 user-info">
+                <span class="activation">Selected</span>
+                <h3>Bulzai</h3>
+                <p>Level 50</p>
+                <p>Wins: 540</p>
+                <p>Losses: 134</p>
+                <p>Achievements: 9440</p>
+              </div>
         
-        <p>Not any of the user above? <a href="#">Enter it manually</a></p>
+            </li>
+        
+        
+          </ul>
       
-      
-        <ul class="login-controls">
-          <li><button class="large awesome blue">Register</button></li>
-          <li><button class="large awesome blue">Invite Friends</button></li>
-          <li><button class="large awesome disabled">Enter World</button></li>
-          
-        </ul>
-      </form>
+          <div class="remember-password">
+            <label for="remember">Remember Password?</label>
+            <input id="remember" type="checkbox" value="true" name="remember" checked />
+          </div>    
+    
+          <ul class="login-controls">
+            <li><button class="large awesome blue">Register</button></li>
+            <li><button class="large awesome blue">Invite Friends</button></li>
+            <li><button class="large awesome disabled">Enter World</button></li>
+        
+          </ul>
+        </form>
+      </div>
     </div>
-
   
-    <footer>
-
-    </footer>
+    <footer></footer>
   </div>
 </div> <!-- end of #container -->

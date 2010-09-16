@@ -1,20 +1,22 @@
 .page-login {
 
-  position: relative;
-  color: #fff;
-  text-shadow: 3px 3px 5px #000;
-  border: 1px solid #000;
-  background: transparent url(/images/backgrounds/bg-pokemon-login.jpg) center center no-repeat;
-  width: 650px;
-  height: 450px;
-  margin: 50px auto 0 auto;
   
   h1 {
     font-size: 32px;
     margin: 10px;
     text-transform: uppercase;
   }
-  
+
+  #login-panel {
+    position: relative;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    border: 1px solid #000;
+    background: transparent url(/images/backgrounds/bg-pokemon-login.jpg) center center no-repeat;
+    width: 650px;
+    height: 450px;
+    margin: 50px auto 0 auto;
+  }
   #login {
     margin: 15px 0px;
     

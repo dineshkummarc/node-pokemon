@@ -49,7 +49,12 @@ app.get('/', function(req, res){
     });
 });
 
+// GET: Redirect the user back to login screen, only access /game by POST
 app.get('/game', function(req, res){
+  res.redirect('/');
+});
+
+app.post('/game', function(req, res){
   
     res.render('game.ejs', {
       locals: {
@@ -83,7 +88,7 @@ app.get('/testdb', function(req, res) {
 if (!module.parent) app.listen(3000);
 
 
-/* Socket Server */ 
+/* Chat Socket Server */ 
 server = http.createServer(function(req, res){});
 server.listen(3001);
 io = io.listen(server);
@@ -91,7 +96,7 @@ var buffer = [];
 
 io.on('connection', function(client){
   client.send({ buffer: buffer });
-  client.broadcast({ announcement: client.sessionId + ' connected' });
+  //client.broadcast({ announcement: client.sessionId + ' connected' });
 
   client.on('message', function(message){
     var msg = { message: [client.sessionId, message] };
@@ -101,7 +106,7 @@ io.on('connection', function(client){
   });
 
   client.on('disconnect', function(){
-    client.broadcast({ announcement: client.sessionId + ' disconnected' });
+    //client.broadcast({ announcement: client.sessionId + ' disconnected' });
   });
 });
 

@@ -8,9 +8,8 @@
     bottom: 176px; }
   .page-game #hand {
     position: absolute;
-    width: 100%;
+    width: 980px;
     height: 175px;
-    border-top: 1px solid #000;
     bottom: 0px; }
     .page-game #hand .gutter {
       width: 100%;
@@ -18,8 +17,8 @@
     .page-game #hand .shade {
       position: absolute;
       top: 0px;
+      width: 980px;
       opacity: 0.6;
-      width: 100%;
       height: 175px;
       background: #000; }
     .page-game #hand h2 {

@@ -263,7 +263,7 @@ button {
   _margin-right: -3px; }
 
 body {
-  font: 14px "Lucida Grande", "Helvetica Nueue", Arial, sans-serif;
+  font: 12px "Lucida Grande", "Helvetica Nueue", Arial, sans-serif;
   background: url(/images/backgrounds/grass.gif); }
 
 button {
@@ -342,20 +342,27 @@ button {
 .yellow.awesome:hover {
   background-color: #fc9200; }
 
-#navigation {
+header {
   border-bottom: 1px solid #000;
-  height: 30px;
-  color: #fff; }
-  #navigation .shade {
+  height: 30px; }
+  header .shade {
     position: absolute;
     top: 0px;
     width: 100%;
     background: #000;
     opacity: 0.6;
-    height: 30px; }
+    height: 30px;
+    z-index: -9999; }
+
+#navigation {
+  color: #fff; }
   #navigation li {
     list-style: none;
     display: inline; }
+
+#navigation, footer, #main {
+  width: 980px;
+  margin: 0 auto; }
 
 .panel {
   box-shadow: 1px 1px 35px black;
@@ -386,6 +393,7 @@ button {
   position: relative;
   font-size: .8em;
   opacity: 1;
+  cursor: pointer;
   -webkit-perspective: 700; }
 
 /* -- make sure to declare a default for every property that you want animated -- */
@@ -400,9 +408,12 @@ button {
   border: 1px solid #ccc;
   background: url(/images/sprites/sprite-small-off.jpg) 0 0 no-repeat;
   text-align: center;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+  /*
+  	box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  	
+  	*/
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   /* -- transition is the magic sauce for animation -- */
@@ -412,11 +423,11 @@ button {
 
 .card.flip .front {
   z-index: 900;
-  border-color: #eee;
   -webkit-transform: rotateY(180deg);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); }
+  /*
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);*/ }
 
 .card .back {
   float: none;
@@ -432,7 +443,6 @@ button {
   -webkit-transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  /* -- transition is the magic sauce for animation -- */
   transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out; }
@@ -440,9 +450,10 @@ button {
 .card.flip .back {
   z-index: 1000;
   -webkit-transform: rotateY(0deg);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); }
+  /*
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);*/ }
 
 .card .back, .card .front {
   -moz-border-radius: .5em;
@@ -474,7 +485,11 @@ button {
 #friends.active {
   display: block; }
 
-.page-login {
+.page-login h1 {
+  font-size: 32px;
+  margin: 10px;
+  text-transform: uppercase; }
+.page-login #login-panel {
   position: relative;
   color: #fff;
   text-shadow: 3px 3px 5px #000;
@@ -483,51 +498,47 @@ button {
   width: 650px;
   height: 450px;
   margin: 50px auto 0 auto; }
-  .page-login h1 {
-    font-size: 32px;
-    margin: 10px;
-    text-transform: uppercase; }
-  .page-login #login {
-    margin: 15px 0px; }
-    .page-login #login .users {
-      margin: 0 0 15px 0; }
-      .page-login #login .users li {
-        position: relative;
-        cursor: pointer;
-        background: #fff;
-        list-style: none;
-        color: #111;
-        margin-bottom: 15px;
-        border: 1px solid #999;
-        padding: 10px;
-        opacity: 0.6;
-        text-shadow: none; }
-        .page-login #login .users li span.activation {
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          color: #3cb700;
-          display: none;
-          text-transform: uppercase; }
-        .page-login #login .users li .user-icon {
-          background: #000;
-          float: right;
-          margin-right: 15px; }
-        .page-login #login .users li .user-info h3 {
-          font-size: 20px;
-          text-transform: uppercase; }
-        .page-login #login .users li.active {
-          opacity: 1;
-          background: transparent url(/images/backgrounds/bg-gradient.png) 0 0 repeat-x; }
-          .page-login #login .users li.active span.activation {
-            display: block; }
-  .page-login .login-controls {
-    position: absolute;
-    right: 10px;
-    bottom: 10px; }
-    .page-login .login-controls li {
-      display: inline;
-      list-style: none; }
+.page-login #login {
+  margin: 15px 0px; }
+  .page-login #login .users {
+    margin: 0 0 15px 0; }
+    .page-login #login .users li {
+      position: relative;
+      cursor: pointer;
+      background: #fff;
+      list-style: none;
+      color: #111;
+      margin-bottom: 15px;
+      border: 1px solid #999;
+      padding: 10px;
+      opacity: 0.6;
+      text-shadow: none; }
+      .page-login #login .users li span.activation {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #3cb700;
+        display: none;
+        text-transform: uppercase; }
+      .page-login #login .users li .user-icon {
+        background: #000;
+        float: right;
+        margin-right: 15px; }
+      .page-login #login .users li .user-info h3 {
+        font-size: 20px;
+        text-transform: uppercase; }
+      .page-login #login .users li.active {
+        opacity: 1;
+        background: transparent url(/images/backgrounds/bg-gradient.png) 0 0 repeat-x; }
+        .page-login #login .users li.active span.activation {
+          display: block; }
+.page-login .login-controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px; }
+  .page-login .login-controls li {
+    display: inline;
+    list-style: none; }
 
 .page-game {
   /* BATTLEGROUND */
@@ -539,9 +550,8 @@ button {
     bottom: 176px; }
   .page-game #hand {
     position: absolute;
-    width: 100%;
+    width: 980px;
     height: 175px;
-    border-top: 1px solid #000;
     bottom: 0px; }
     .page-game #hand .gutter {
       width: 100%;
@@ -549,8 +559,8 @@ button {
     .page-game #hand .shade {
       position: absolute;
       top: 0px;
+      width: 980px;
       opacity: 0.6;
-      width: 100%;
       height: 175px;
       background: #000; }
     .page-game #hand h2 {

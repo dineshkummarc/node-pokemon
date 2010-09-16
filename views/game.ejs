@@ -1,7 +1,8 @@
 <div id="container" class="page-game">
   <header>
+    <div class="shade"></div>
+    
     <div id="navigation">
-      <div class="shade"></div>
       <div class="nav-container">
         <ul>
           <li><button id="btn-friends" class="awesome">Friends (5 online)</button>
@@ -12,7 +13,6 @@
                 <li>Arnold Schwarzenegger</li>
               </ul>
             </div>
-          
           </li>
           <li><button id="btn-arena" class="awesome">Battle Arena</button></li>
           <li><button id="btn-leave" class="awesome">Leave Battle</button></li>
@@ -22,31 +22,20 @@
         </ul>
       </div>
     </div>
-    <div id="user-status">500-143 (78% win rate)</div>
   
   </header>
   
   <div id="main">
-
     <div id="chat-widget">
-
       <div class="shade"></div>
       <div class="chat-container">
-        <div class="chat-channel">
-          test
-        </div>
-        <div class="chat-input">
-          <div id="chat"><p>Connecting...</p></div>
+        
+        <div id="chat"><p>Connecting...</p></div>
+          
+        <div class="chat-input">  
           <form id="form" onsubmit="send(); return false;">
             <input type="text" autocomplete="off" id="text"><input type="submit" value="Send">
           </form>
-          
-          <!--
-          <form id="chat" onsubmit="send(); return false;">
-              <input type="text" class="chat-textbox" autocomplete="off" id="chat-txt" /><button type="submit" class="awesome">Send</button>
-          </form>
-        -->
-        
         </div>
       </div>
 
@@ -58,112 +47,61 @@
     
     
       <div class="my-creatures">
-        <div id="card-lugia" class="tappable">
-          150HP
-        </div>
+        <div id="card-lugia" class="card tappable"></div>
       </div>
     </div>
     
     
     <div id="hand">
-      <div class="shade"></div>
+      <div class="shade panel"></div>
       <div class="gutter">
       
         <h2>MY HAND</h2>
         <ul class="hand-cards">
           <li>
-
             <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
-            </div>
-            
-          </li>
-          <li>
-            <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
+              <div class="front"></div>
+              <div class="back"></div>
             </div>
           </li>
           <li>
             <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
+              <div class="front"></div>
+              <div class="back"></div>
             </div>
           </li>
           <li>
             <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <div class="front"></div>
+              <div class="back"></div>
             </div>
           </li>
           
           <li>
             <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
+              <div class="front"></div>
+              <div class="back"></div>
             </div>
           </li>
           
           <li>
             <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
+              <div class="front"></div>
+              <div class="back"></div>
             </div>
           </li>
-          
-          <li>
-            <div class="card">
-              <div class="front">
-                <h3>Front</h3>
-              </div>
-              <div class="back">
-                <div class="pad">
-                  <h3>Back</h3>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          
-          
-          
         </ul>
       </div>
     </div>
