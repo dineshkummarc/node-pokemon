@@ -196,7 +196,7 @@ dojo.declare("stdlib.behavior.UpdateCssClassBehavior", mojo.command.Behavior,
 			if (typeof cssClass == 'object') {
 				//check array to see that all items are objects
 				if (cssClass.length > 0) {
-					for (var i=0; i< cssClass.length; i++) {
+					for (var i = 0; i< cssClass.length; i++) {
 						if (typeof cssClass[i] != 'string') {
 							throw new Error('ERROR stdlib.behavior.UpdateCssClassBehavior - CssClass parameter is not an array of type String');
 							break;
@@ -488,3 +488,16 @@ dojo.declare("stdlib.behavior.PreventDefaultEventBehavior", mojo.command.Command
 		} catch(e) {}
   }
 });
+/* 
+	Class: stdlib.behavior.PlaySoundBehavior
+*/
+dojo.provide("stdlib.behavior.PlaySoundBehavior");
+dojo.declare("stdlib.behavior.PlaySoundBehavior", mojo.command.Behavior, 
+{
+	execute: function(requestObj) {
+    var params = requestObj.getParams();
+    params.audio.pause();
+    params.audio.play();
+  }
+});
+

@@ -1,11 +1,14 @@
 .page-game {
   /* BATTLEGROUND */
-  /* HAND AREA */
-  /* TESTING AREA */ }
-  .page-game .my-creatures {
+  /*
+  .my-creatures {
     position: absolute;
     width: 100%;
-    bottom: 176px; }
+    bottom: 176px;
+  }
+*/
+  /* HAND AREA */
+  /* TESTING AREA */ }
   .page-game #hand {
     position: absolute;
     width: 980px;

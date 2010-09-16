@@ -160,8 +160,36 @@ header {
   -moz-transform: rotate(45deg);
 }
 
-
-#chat-widget, #chat-widget iframe {
-  width: 300px;
-  height: 220px;
+#chat-widget {
+  $height: 100px;
+  $width: 210px;
+  height: $height;
+  width: $width;
+  position: relative;
+  color: lime;
+  #chat {
+    position: relative;
+    top: 10px;
+    height: $height + 20;
+    width: $width;
+    overflow-y: scroll;
+  }
+  .shade {
+    position: absolute;
+    top: 10px;
+    height: $height + 20;
+    width: $width;    
+    background: #000;
+    opacity: 0.6;
+    z-index: -9999;
+  }
+  .chat-input {
+    margin-top: 10px;
+    #text {
+      width: 140px;
+    }
+    button {
+      float: right;
+    }
+  }
 }

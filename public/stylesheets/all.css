@@ -468,9 +468,31 @@ header {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg); }
 
-#chat-widget, #chat-widget iframe {
-  width: 300px;
-  height: 220px; }
+#chat-widget {
+  height: 100px;
+  width: 210px;
+  position: relative;
+  color: lime; }
+  #chat-widget #chat {
+    position: relative;
+    top: 10px;
+    height: 120px;
+    width: 210px;
+    overflow-y: scroll; }
+  #chat-widget .shade {
+    position: absolute;
+    top: 10px;
+    height: 120px;
+    width: 210px;
+    background: #000;
+    opacity: 0.6;
+    z-index: -9999; }
+  #chat-widget .chat-input {
+    margin-top: 10px; }
+    #chat-widget .chat-input #text {
+      width: 140px; }
+    #chat-widget .chat-input button {
+      float: right; }
 
 #friends {
   display: none;
@@ -542,12 +564,15 @@ header {
 
 .page-game {
   /* BATTLEGROUND */
-  /* HAND AREA */
-  /* TESTING AREA */ }
-  .page-game .my-creatures {
+  /*
+  .my-creatures {
     position: absolute;
     width: 100%;
-    bottom: 176px; }
+    bottom: 176px;
+  }
+*/
+  /* HAND AREA */
+  /* TESTING AREA */ }
   .page-game #hand {
     position: absolute;
     width: 980px;
