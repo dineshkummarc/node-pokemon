@@ -1,8 +1,13 @@
 #Massively Multiplayer Online Pokemon Card Game on NodeJS/WebSockets/CouchDB
 
+
 Web applications have evolved by utilizing push technologies. If you're building anything where users need to interact with other users to create a competitive environment, this queue system is just for you. The importance of queue'ing systems is to help users find other players to play with. Here's some basic code to get you set up, the rest is up to your imagination.
 
+![NodeJS MMO Pokemon Architecture](http://bueza.com/temp/mmo-cards-architecture.png) 
+
 [Video Demonstration](http://youtu.be/Kcsjb1Isweo?hd=1)
+
+[My Blog Post](http://jbueza.blogspot.com/2010/09/nodejs-hack-session-mmo-pokemon-with.html)
 
 ## Examples of Queueing Systems (Competitive and Non-Competitive)
 
