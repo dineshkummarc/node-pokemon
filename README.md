@@ -1,22 +1,21 @@
-# NodeJS/WebSockets/CouchDB - Massively Multiplayer Online Pokemon Card Game
+#Massively Multiplayer Online Pokemon Card Game on NodeJS/WebSockets/CouchDB
 
-Web applications have evolved by utilizing push technologies. If you're building anything where users need to interact with other users to create
-a competitive environment, this queue system is just for you. The importance of queue'ing systems is to help users find other players
-to play with. Here's some basic code to get you set up, the rest is up to your imagination.
+Web applications have evolved by utilizing push technologies. If you're building anything where users need to interact with other users to create a competitive environment, this queue system is just for you. The importance of queue'ing systems is to help users find other players to play with. Here's some basic code to get you set up, the rest is up to your imagination.
 
-## Examples of Queueing systems
+## Examples of Queueing Systems (Competitive and Non-Competitive)
 
-* ChatRoulette 
-* Chess Riot 
 * World of Warcraft Battleground/Arena queues (finds opponants based on match-making rating)
 * Starcraft 2 game finder (finds players within certain leagues to fight against)
 * Warcraft 3 game finder (finds players within certain ratings based off of ELO rating system)
+* ChatRoulette 
+* Chess Riot 
 
 ## Technologies Used
 
+### Backend
+
 * NodeJS
 * WebSockets (iPad, iPhone, Chrome, Safari)
-* HTML5/CSS3 for Queue Interface (Much like World of Warcraft?)
 * Fallbacks for non-webkit browsers
   * Adobe Flash Socket
   * ActiveX HTMLFile (IE)
@@ -24,10 +23,17 @@ to play with. Here's some basic code to get you set up, the rest is up to your i
   * XHR with long-polling
   * JSONP polling (for cross-domain)
 
+###Frontend
+
+* SASS with SCSS, OOCSS
+* HTML5 Boilerplate
+* CSS3 for drop shadows, transparencies, rounded corners, and animations!
+
 ## NodeJS Packages
 
 * npm install express
-* npm install socket.io (must be a fixed version of it of 0.5.3 from github -- pst me for help with this)
+* npm install ejs  (possibly swapping this out for YUI as a more comfortable templating engine)
+* npm install socket.io (must be a fixed version of it of 0.5.3 from github, not npm -- pst me for help with this)
 
 ## MIT License
 
