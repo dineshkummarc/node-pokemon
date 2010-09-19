@@ -35,6 +35,21 @@ Web applications have evolved by utilizing push technologies. If you're building
 * npm install ejs  (possibly swapping this out for YUI as a more comfortable templating engine)
 * npm install socket.io (must be a fixed version of it of 0.5.3 from github, not npm -- pst me for help with this)
 
+
+## Data 
+
+### Importing Achievements
+<code>
+  $ cd data
+  $ node import.achievement.js
+</code>
+
+### Importing Users
+<code>
+  $ cd data
+  $ node import.user.js
+</code>
+
 ## MIT License
 
 Copyright (c) 2010 Jaime Bueza

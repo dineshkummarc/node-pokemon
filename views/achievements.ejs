@@ -1,0 +1,26 @@
+<!-- TODO: Move response.render() out of the module and into the app.js, makes it more clear -->
+<div id="container" class="page-login">
+  <div id="main">
+
+
+    <h1>lolwat</h1>
+
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Achievement Points</th>
+      </tr>
+      <% for(var i = 0; i < achievements.length; i++) {%>
+         <td><%= achievements[i].name %></td>
+         <td><%= achievements[i].description %></td>
+         <td><%= achievements[i].worth %></td>
+      <% } %>
+    </table>
+
+
+    <footer></footer>
+    
+  </div>
+</div> <!-- end of #container -->

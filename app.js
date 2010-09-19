@@ -2,7 +2,8 @@
 /**
  * Module dependencies.
  */
- 
+
+//npm based
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
@@ -10,14 +11,13 @@ var sys = require('sys');
 var express = require('express');
 var connect = require('connect');
 var io = require('socket.io');
-var couchdb = require('couchdb'),
-    client = couchdb.createClient(5984, 'localhost'),
-    db = client.db('cards');
+
+//custom libraries
+var achievement = require('./lib/achievement');
 
 var app = module.exports = express.createServer();
 
 // Configuration
-
 app.configure(function(){
     app.set('views', __dirname + '/views');
     app.use(connect.bodyDecoder());
@@ -28,7 +28,6 @@ app.configure(function(){
 });
 
 // Routes
-
 app.get('/', function(req, res){
     res.render('login.ejs', {
       locals: {
@@ -46,7 +45,6 @@ app.get('/game', function(req, res){
 });
 
 app.post('/game', function(req, res){
-  
     res.render('game.ejs', {
       locals: {
         page: {
@@ -56,12 +54,11 @@ app.post('/game', function(req, res){
     });
 });
 
-app.get('/testdb', function(req, res) {
-  db.getDoc('hellothere', function(er, doc) {
-    sys.puts('Fetched my new doc from couch:');
-    sys.puts(doc);
-  });    
-});
+
+//JSON web services
+app.get('/user/achievements', achievement.list);
+app.post('/user/achievements', achievement.save);
+
 
 // Only listen on $ node app.js
 if (!module.parent) app.listen(3000);
