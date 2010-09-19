@@ -60,6 +60,56 @@ Hopefully, this proof of concept will inspire other developers who want to shape
   $ node import.user.js
 </code>
 
+
+##Web Services
+
+### Achievements
+
+* http://localhost:3000/user/achievements
+
+<code>
+  {
+    "total_rows": 3,
+    "offset": 0,
+    "rows": [{
+      "id": "7f4496ce212a8357fe8c400ab5010ff8",
+      "key": null,
+      "value": {
+        "_id": "7f4496ce212a8357fe8c400ab5010ff8",
+        "_rev": "1-5b79a5397319992c1630ba5d9986e4dc",
+        "name": "Pokemon Master",
+        "category": "Player vs Player",
+        "description": "Win 10 Pokemon Arena Games",
+        "worth": 10
+      }
+    },
+    {
+      "id": "7f4496ce212a8357fe8c400ab5011224",
+      "key": null,
+      "value": {
+        "_id": "7f4496ce212a8357fe8c400ab5011224",
+        "_rev": "1-ff96b86dcb6ff585d21628ae3d67484f",
+        "name": "Pokemon Champion",
+        "category": "Player vs Player",
+        "description": "Win 100 Pokemon Arena Games",
+        "worth": 100
+      }
+    },
+    {
+      "id": "7f4496ce212a8357fe8c400ab5011512",
+      "key": null,
+      "value": {
+        "_id": "7f4496ce212a8357fe8c400ab5011512",
+        "_rev": "1-c6c0a756c0fbd83c49541c10d449bfef",
+        "name": "Pokemon Gladiator",
+        "category": "Player vs Player",
+        "description": "Earn the Gladiator title from Season 1 by being in the top 0.5 percent.",
+        "worth": 1000
+      }
+    }]
+  }
+</code>
+
 ## MIT License
 
 Copyright (c) 2010 Jaime Bueza
