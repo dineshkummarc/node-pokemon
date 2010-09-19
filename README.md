@@ -1,6 +1,5 @@
 #Massively Multiplayer Online Pokemon Card Game on NodeJS/WebSockets/CouchDB
 
-
 Web applications have evolved by utilizing push technologies. If you're building anything where users need to interact with other users to create a competitive environment, this queue system is just for you. The importance of queue'ing systems is to help users find other players to play with. Here's some basic code to get you set up, the rest is up to your imagination.
 
 ![NodeJS MMO Pokemon Architecture](http://bueza.com/temp/mmo-cards-architecture.png) 
@@ -9,6 +8,8 @@ Web applications have evolved by utilizing push technologies. If you're building
 
 [My Blog Post](http://jbueza.blogspot.com/2010/09/nodejs-hack-session-mmo-pokemon-with.html)
 
+Hopefully, this proof of concept will inspire other developers who want to shape the open Web into a more engaging experience (easy to build real-time web applications) on top of a broad subset of consumer technologies (iPad, iPhone, Droids, Nokias, Samsung Galaxy, Chrome, Safari, Firefox, IE, etc).
+
 ## Examples of Queueing Systems (Competitive and Non-Competitive)
 
 * World of Warcraft Battleground/Arena queues (finds opponants based on match-making rating)
@@ -16,12 +17,13 @@ Web applications have evolved by utilizing push technologies. If you're building
 * Warcraft 3 game finder (finds players within certain ratings based off of ELO rating system)
 * ChatRoulette 
 * Chess Riot 
+* [Scrabb.ly](http://www.scrabb.ly) -- MMO Scrabble. So, freaking, awesome and inspiring.
 
 ## Technologies Used
 
 ### Backend
 
-* NodeJS
+* [NodeJS](http://www.nodejs.org)
 * WebSockets (iPad, iPhone, Chrome, Safari)
 * Fallbacks for non-webkit browsers
   * Adobe Flash Socket
@@ -32,9 +34,10 @@ Web applications have evolved by utilizing push technologies. If you're building
 
 ###Frontend
 
-* SASS with SCSS, OOCSS
-* HTML5 Boilerplate
+* SASS with SCSS, [OOCSS](http://wiki.github.com/stubbornella/oocss/)
+* [HTML5 Boilerplate](http://www.html5boilerplate.com) -- Paul, you a crazy ninja.
 * CSS3 for drop shadows, transparencies, rounded corners, and animations!
+* [Blast Mojo Framework](http://www.blastmojo.com) -- Javascript MVC
 
 ## NodeJS Packages
 
