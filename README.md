@@ -2,6 +2,9 @@
 
 Web applications have evolved by utilizing push technologies. If you're building anything where users need to interact with other users to create a competitive environment, this queue system is just for you. The importance of queue'ing systems is to help users find other players to play with. Here's some basic code to get you set up, the rest is up to your imagination.
 
+[Video Demonstration](http://youtu.be/Kcsjb1Isweo?hd=1)
+<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/Kcsjb1Isweo?fs=1&amp;hl=en_US&amp;rel=0&amp;color1=0xe1600f&amp;color2=0xfebd01&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Kcsjb1Isweo?fs=1&amp;hl=en_US&amp;rel=0&amp;color1=0xe1600f&amp;color2=0xfebd01&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+
 ## Examples of Queueing Systems (Competitive and Non-Competitive)
 
 * World of Warcraft Battleground/Arena queues (finds opponants based on match-making rating)
