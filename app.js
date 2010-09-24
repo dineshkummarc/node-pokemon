@@ -1,8 +1,5 @@
 //npm based
 var http = require('http');
-var url = require('url');
-var fs = require('fs');
-var sys = require('sys');
 var express = require('express');
 var connect = require('connect');
 var io = require('socket.io');
@@ -11,6 +8,7 @@ var io = require('socket.io');
 var achievement = require('./lib/achievement');
 var chat = require('./lib/chat');
 var queue = require('./lib/queue');
+
 
 var app = module.exports = express.createServer();
 
