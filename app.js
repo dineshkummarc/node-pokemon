@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 //npm based
 var http = require('http');
 var url = require('url');
@@ -14,6 +9,8 @@ var io = require('socket.io');
 
 //custom libraries
 var achievement = require('./lib/achievement');
+var chat = require('./lib/chat');
+var queue = require('./lib/queue');
 
 var app = module.exports = express.createServer();
 
@@ -65,23 +62,6 @@ if (!module.parent) app.listen(3000);
 
 
 /* Chat Socket Server */ 
-chatServer = http.createServer(function(req, res){});
-chatServer.listen(3001);
-io = io.listen(chatServer);
-var buffer = [];
-
-io.on('connection', function(client){
-  client.send({ buffer: buffer });
-  client.on('message', function(message){
-    var msg = { message: [client.sessionId, message] };
-    buffer.push(msg);
-    if (buffer.length > 15) buffer.shift();
-    client.broadcast(msg);
-  });
-
-  client.on('disconnect', function(){
-  });
-});
-
+chat.init();
 /* Arena Queue Server */
-
+queue.init();
