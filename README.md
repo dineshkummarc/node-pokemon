@@ -35,7 +35,7 @@ Hopefully, this proof of concept will inspire other developers who want to shape
 ###Frontend
 
 * SASS with SCSS, [OOCSS](http://wiki.github.com/stubbornella/oocss/)
-* [HTML5 Boilerplate](http://github.com/paulirish/html5-boilerplate) -- Paul, you a crazy ninja.
+* [HTML5 Boilerplate](http://github.com/paulirish/html5-boilerplate)
 * CSS3 for drop shadows, transparencies, rounded corners, and animations!
 * [Blast Mojo Framework](http://www.blastmojo.com) -- Javascript MVC
 
