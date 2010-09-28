@@ -8,6 +8,7 @@ var io = require('socket.io');
 var achievement = require('./lib/achievement');
 var chat = require('./lib/chat');
 var queue = require('./lib/queue');
+var arena = require('./lib/arena');
 
 
 var app = module.exports = express.createServer();
@@ -46,6 +47,7 @@ app.get('/game', function(req, res){
 
 app.get('/dialog/achievements', achievement.index);
 
+app.get('/dialog/arena', arena.index);
 
 
 //JSON web services
