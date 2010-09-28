@@ -44,7 +44,7 @@ Hopefully, this proof of concept will inspire other developers who want to shape
 * npm install express
 * npm install ejs  (possibly swapping this out for YUI as a more comfortable templating engine)
 * npm install socket.io (must be a fixed version of it of 0.5.3 from github, not npm -- pst me for help with this)
-
+* npm install supervisor 
 
 ## Data 
 
@@ -64,6 +64,9 @@ Hopefully, this proof of concept will inspire other developers who want to shape
 ##Web Services
 
 ### Achievements
+
+
+* View: http://localhost:3000/dialog/achievements
 
 * http://localhost:3000/user/achievements
 

@@ -14,6 +14,7 @@ var app = module.exports = express.createServer();
 
 // Configuration
 app.configure(function(){
+    app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.use(connect.bodyDecoder());
     app.use(connect.methodOverride());
@@ -24,7 +25,7 @@ app.configure(function(){
 
 // Routes
 app.get('/', function(req, res){
-    res.render('login.ejs', {
+    res.render('login', {
       locals: {
         page: {
           title: "Concept : Pokemon HTML5/CSS3/NodeJS Game : please login"
@@ -33,14 +34,8 @@ app.get('/', function(req, res){
       }
     });
 });
-
-// GET: Redirect the user back to login screen, only access /game by POST
 app.get('/game', function(req, res){
-  res.redirect('/');
-});
-
-app.post('/game', function(req, res){
-    res.render('game.ejs', {
+    res.render('game', {
       locals: {
         page: {
           title: "POKEMON HTML5/JS/CSS/NODEJS EXAMPLE"
@@ -48,6 +43,9 @@ app.post('/game', function(req, res){
       }
     });
 });
+
+app.get('/dialog/achievements', achievement.index);
+
 
 
 //JSON web services

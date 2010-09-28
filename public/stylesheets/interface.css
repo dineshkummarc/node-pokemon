@@ -149,3 +149,50 @@ header {
       width: 140px; }
     #chat-widget .chat-input button {
       float: right; }
+
+/* Modal Dialogs */
+.bg-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  filter: Alpha(Opacity=50);
+  -moz-opacity: 0.5;
+  background-color: #ddd;
+  visibility: hidden;
+  width: expression(document.body.clientWidth);
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight);
+  z-index: 100; }
+
+.dialog-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  z-index: 101;
+  background-color: white;
+  top: expression(document.body.clientHeight / 2 - this.offsetHeight / 2);
+  left: expression(document.body.clientWidth / 2 - this.offsetWidth / 2);
+  border: 1px solid #777;
+  border-top: 0;
+  padding: 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .dialog-modal .hd-modal-dialog {
+    margin: 0;
+    padding: 0px;
+    color: #333;
+    font-weight: bold;
+    background-color: #ccc;
+    border: 1px solid #989898;
+    position: absolute;
+    top: 0px;
+    left: -1px;
+    height: 7px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0; }
