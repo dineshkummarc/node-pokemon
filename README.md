@@ -15,9 +15,8 @@ Hopefully, this proof of concept will inspire other developers who want to shape
 * World of Warcraft Battleground/Arena queues (finds opponants based on match-making rating)
 * Starcraft 2 game finder (finds players within certain leagues to fight against)
 * Warcraft 3 game finder (finds players within certain ratings based off of ELO rating system)
-* ChatRoulette 
 * Chess Riot 
-* [Scrabb.ly](http://www.scrabb.ly) -- MMO Scrabble. So, freaking, awesome and inspiring.
+* [WordSquared](http://www.wordsquared.com) -- MMO Scrabble. So, freaking, awesome and inspiring.
 
 ## Technologies Used
 
@@ -36,7 +35,7 @@ Hopefully, this proof of concept will inspire other developers who want to shape
 
 * SASS with SCSS, [OOCSS](http://wiki.github.com/stubbornella/oocss/)
 * [HTML5 Boilerplate](http://github.com/paulirish/html5-boilerplate)
-* CSS3 for drop shadows, transparencies, rounded corners, and animations!
+* CSS3 for drop shadows, transparencies, rounded corners, and animations (card flipping)!
 * [Blast Mojo Framework](http://www.blastmojo.com) -- Javascript MVC
 
 ## NodeJS Packages
